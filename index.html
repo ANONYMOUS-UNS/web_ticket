@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de Atendimento</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/filas.js"></script>
+    <script src="js/estado.js"></script>
+    <script src="js/gerarNumero.js"></script>
+    <script src="js/emitirSenha.js"></script>
+    <script src="js/atualizarPainel.js"></script>
+    <script src="js/chamarProxima.js"></script>
+</head>
+<body>
+
+<h1>Controle de Atendimento</h1>
+
+<div class="container">
+
+    <div class="box">
+        <h2>Tipos de Senhas</h2>
+        <button onclick="emitirSenha('SP')">Emitir Prioritária (SP)</button>
+        <button onclick="emitirSenha('SG')">Emitir Geral (SG)</button>
+        <button onclick="emitirSenha('SE')">Emitir Exames (SE)</button>
+
+        <p id="ultimaSenha"></p>
+    </div>
+
+    <div class="box">
+        <h2>Atendente</h2>
+        <button onclick="chamarProxima()">Chamar Próxima Senha</button>
+        <p id="chamadaAtual"></p>
+    </div>
+
+    <div class="box">
+        <h2>Painel</h2>
+        <ul id="painel"></ul>
+    </div>
+
+</div>
+
+
+</body>
+</html>
